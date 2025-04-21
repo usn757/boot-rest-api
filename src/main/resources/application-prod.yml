@@ -8,11 +8,11 @@ spring:
       format_sql: true
     hibernate:
       ddl-auto: none
-#  datasource:
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: ${DB_URL}
-#    username: ${DB_USERNAME}
-#    password: ${DB_PASSWORD}
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 #  # 소셜 로그인
 ##  security:
 ##    oauth2:
