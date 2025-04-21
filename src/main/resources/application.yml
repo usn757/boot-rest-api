@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: boot-rest-api # Application name
+  profiles:
+    active: dev # Activate the 'dev' profile (expects application-dev.yml)
+
+    # Hikari Connection Pool settings
+    hikari:
+      maximum-pool-size: 10   # Max number of active connections
+      minimum-idle: 5       # Min number of idle connections maintained
+      # connection-timeout: 30000 # Max wait time for a connection (ms)
+      # idle-timeout: 600000 # Max idle time before closing (ms)
+      # max-lifetime: 1800000 # Max lifetime of a connection (ms)
+  # MyBatis ??
+  mybatis:
+    #    mapper-locations: classpath:mapper/*.xml # ?? XML ?? ?? ??
+    type-aliases-package: org.example.bootrest.model.domain # ??? ?? ??? ??
+    configuration:
+      map-underscore-to-camel-case: true # ????? ???? ?? ??? ????? ?? ??
