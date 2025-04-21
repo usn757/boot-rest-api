@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/recipe") // Spring MVC
+@CrossOrigin // 다 풀리는 거고 -> Open API
 public class RecipeController {
 
     private final RecipeService recipeService;

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -29,7 +29,8 @@
     fetchRecipeList();
     recipeForm.addEventListener('submit', async (evt) => {
         evt.preventDefault();
-        await fetch('/api/recipe', {
+        // await fetch('/api/recipe', {
+        await fetch('http://localhost:8080/api/recipe', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -42,7 +43,8 @@
         await fetchRecipeList();
     });
     async function fetchRecipeList() {
-        const response = await fetch('/api/recipe');
+        // const response = await fetch('/api/recipe');
+        const response = await fetch('http://localhost:8080/api/recipe');
         const json = await response.json();
         recipeList.innerHTML = JSON.stringify(json);
     }
